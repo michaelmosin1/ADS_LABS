@@ -2,6 +2,8 @@
 #include <iostream>
 #include <string>
 
+using namespace std;
+
 struct Stack{
     char* _massive;
     size_t _length;
@@ -34,9 +36,9 @@ struct Stack{
 };
 
 int main(){
-    std::string inputLine;
-    std::cout << "Введите строку" << std::endl;
-    std::cin >> inputLine;
+    string inputLine;
+    cout << "Введите строку" << endl;
+    cin >> inputLine;
     Stack myStack(inputLine.length());
     char previous_symbol = '\0';
     bool isCorrect = true;
@@ -59,7 +61,7 @@ int main(){
         }
         else isCorrect = false;
     }
-    if (isCorrect && myStack.isEmpty()) std::cout << "Строка существует" << std::endl;
-    else std::cout << "Строка не существует" << std::endl;
+    if (isCorrect && myStack.isEmpty()) cout << "Строка существует" << endl;
+    else cout << "Строка не существует" << endl;
     return 0;
 }

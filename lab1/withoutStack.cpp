@@ -1,8 +1,9 @@
 #include <iostream>
 #include <string>
 
+using namespace std;
 
-bool check_correct_line(std::string bracket_line, size_t start, size_t end){
+bool check_correct_line(string bracket_line, size_t start, size_t end){
     bool line_is_correct = true;
     if (end == start) return false;
     else for (size_t i = 0; i < end-1; i++){
@@ -41,12 +42,12 @@ bool check_correct_line(std::string bracket_line, size_t start, size_t end){
     return line_is_correct;
 }
 int main(){
-    std::string input_line;
-    std::cout << "Введите строку: ";
-    std::cin >> input_line;
+    string input_line;
+    cout << "Введите строку: ";
+    cin >> input_line;
     if (check_correct_line(input_line, 0, input_line.length())){
-        std::cout << "Строка существует" << std::endl;
+        cout << "Строка существует" << endl;
     }
-    else std::cout << "Строка не существует" << std::endl;
+    else cout << "Строка не существует" << endl;
     return 0;
 }
